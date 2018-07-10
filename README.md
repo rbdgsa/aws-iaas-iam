@@ -8,6 +8,25 @@ config AWS for Terraform and Packer.
 sh bootstrap.sh
 ``` 
 
+### Create a Local env vars file
+env.rc file
+```env.rc
+export AWS_PROFILE=GSA
+export AWS_REGION="us-east-1"
+export AWS_ACCOUNT_ID=XXXXXXXXXXXX
+
+export STAGE=build
+export NAMESPACE="secureOS"
+
+export GITOWNER=rbd80
+export GITREPO=terraform-aws-ami-secure
+
+export GITTOKEN=XXXXXXX
+export ADMIN_GROUP=iaas_svc
+export ADMIN_USERS="terraform_svc packer_svc"
+
+export KEY_NAME=demo_bastion
+```
 
 ## You need AWS CLI on your host
 

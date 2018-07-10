@@ -18,7 +18,7 @@ function create_user {
     aws iam create-user --user-name $ID --profile $AWS_PROFILE
     aws iam add-user-to-group --group-name $ADMIN_GROUP --user-name $ID --profile $AWS_PROFILE
     aws iam attach-user-policy --user-name $ID --policy-arn "arn:aws:iam::$AWS_ACCOUNT_ID:policy/$ID-Policy" --profile $AWS_PROFILE
-    aws iam create-access-key --user-name $ID --profile GSA > $ID.json
+    aws iam create-access-key --user-name $ID --profile $AWS_PROFILE > $ID.json
 }
 
 function create_iaas_accounts {
@@ -159,7 +159,7 @@ case $choice in
 		;;
 	2)
 		echo "#########################"
-		echo "Create the AWS Pipeline, Terraform "
+		echo "Remove the service Accounts for Terraform & Packer "
         delete_iaas_accounts
 		echo "#########################"
 		;;

@@ -10,6 +10,7 @@
         "cloudwatch:*",
         "codebuild:*",
         "codepipeline:*",
+        "es:*",
         "eks:*",
         "sts:AssumeRole",
         "dynamodb:*",
