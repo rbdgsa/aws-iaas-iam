@@ -150,7 +150,7 @@ tput sgr0
 case $choice in
 	1)
 		echo "#########################"
-		echo "Creating Accounts"
+		echo "Creating Accounts for Terraform & Packer"
         packagecheck
         create_iaas_accounts
         add_new_profile
